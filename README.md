@@ -1,2 +1,2 @@
 # TypicalStudioWeb
- Website for the compsny
+ Website for the company
