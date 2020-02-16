@@ -147,11 +147,11 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ff00cc;
+    background: #FF6100;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #EBEBEB, #FF6100);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #EBEBEB, #FF6100);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .overlay.bg-white {
     color: #000; }
@@ -399,7 +399,7 @@ section {
     transform: translateY(-13px); }
 
 .progress-bar {
-  background-color: #ff00cc; }
+  background-color: #FF6100; }
 
 /*=====  End of FEATURES  ======*/
 /*=============================
@@ -420,7 +420,7 @@ section {
   padding-bottom: 50px; }
 
 .testi-icon {
-  color: #ff00cc; }
+  color: #FF6100; }
 
 .testi-content {
   margin-top: 80px;
@@ -444,7 +444,7 @@ section {
     height: 100%;
     outline: none;
     border-radius: 50%;
-    background-color: rgba(255, 0, 204, 0.3);
+    background-color: #FF4600;
     text-indent: -999em;
     cursor: pointer;
     position: absolute;
@@ -453,7 +453,7 @@ section {
     transition: box-shadow 0.3s ease, background-color 0.3s ease; }
   .owl-dot.active > span {
     background-color: transparent;
-    box-shadow: 0 0 0 2px #ff00cc; }
+    box-shadow: 0 0 0 2px #FF6100; }
 
 .owl-dots {
   position: absolute;
@@ -691,7 +691,7 @@ section {
 =            FORM CONTROL            =
 ====================================*/
 .form-control:focus {
-  border-color: #ff00cc;
+  border-color: #FF6100;
   box-shadow: 0 0 0 0.2rem rgba(253, 101, 90, 0.25); }
 
 .form-control::-webkit-input-placeholder {
@@ -729,22 +729,22 @@ section {
     top: 0;
     height: auto;
     width: 100%;
-    background: #ff00cc;
+    background: #FF6100;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #EBEBEB, #FF6100);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #EBEBEB, #FF6100);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: 11; }
   #header-navbar {
     padding-top: 15px !important;
     padding-bottom: 15px !important; }
   .navbar-transparent .navbar-collapse {
-    background: #ff00cc;
+    background: #FF6100;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #EBEBEB, #FF6100);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #EBEBEB, #FF6100);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px; } }
 
