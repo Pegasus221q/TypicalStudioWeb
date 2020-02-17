@@ -44,62 +44,26 @@
         <div class="collapse navbar-collapse" id="navbar-nav-header">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Games</a>
+                    <a class="nav-link" href="about.php">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">About</a>
+                    <a class="nav-link" href="blog.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a id="side-search-open" class="nav-link" href="#">
-                        <span class="lnr lnr-magnifier"></span>
-                    </a>
-                </li>
-                 <li class="nav-item only-desktop">
-                    <a class="nav-link" id="side-nav-open" href="#">
-                        <span class="lnr lnr-menu"></span>
-                    </a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div id="side-nav" class="sidenav">
-	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
-	<div class="sidenav-content">
-		<p>
-			Slovenia
-		</p>
-		<p>
-			<span class="fs-16 primary-color">Not for public yet</span>
-		</p>
-		<p>main@typicalstudio.com</p>
-	</div>
-</div><div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
-
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<a class="lnr lnr-magnifier" href="index.html"></a>
-			    </button>
-			  </div>
-			</div>
-
-		</form>
-	</div>
-	
-</div>	<div class="jumbotron d-flex align-items-center">
+<div class="jumbotron d-flex align-items-center">
   <div class="container text-center">
     <img src="img/New_logo.png" alt="Loading...">
   </div>
