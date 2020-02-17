@@ -107,7 +107,7 @@
             <div class="row">
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
-                    <form method="post" name="login" action="login_check.php">
+                    <form method="post" name="login" action="user_insert.php">
                     <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Name">
