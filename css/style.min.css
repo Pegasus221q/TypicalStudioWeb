@@ -399,7 +399,9 @@ section {
     transform: translateY(-13px); }
 
 .progress-bar {
-  background-color: #FF6100; }
+  background-color: #FF6100;
+  height: 250px;  
+}
 
 /*=====  End of FEATURES  ======*/
 /*=============================
@@ -754,7 +756,7 @@ section {
   .grid-item {
     width: 100%; }
   .progress {
-    height: 30px;
+    height: 250px;
     font-size: 16px; } }
 
 /*=====  End of RESPONSIVE  ======*/
