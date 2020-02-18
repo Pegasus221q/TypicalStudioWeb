@@ -3,7 +3,7 @@ include_once './session.php';
 include_once './database.php';
 
 $first_name = $_POST['first_name'];
-$last_name = $link,$_POST['last_name'];
+$last_name = $_POST['last_name'];
 $email = $_POST['email'];
 $pass1 = $_POST['pass1'];
 $pass2 = $_POST['pass2'];
