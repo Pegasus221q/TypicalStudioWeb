@@ -8,7 +8,8 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roxy by GetTemplates.co</title>
+    <link rel="icon" href="img/just logo.png">
+    <title>Typical Studio</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -63,7 +64,7 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
+<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/Group_2.jpg)">
   <div class="container text-center">
     <h1 class="display-2 mb-4">Contact Us</h1>
   </div>
@@ -74,7 +75,7 @@
             <!-- Section Title -->
             <div class="title-wrap" data-aos="fade-up">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-sub-title">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. <br> pharetra augue. Donec id elit non mi.</p>
+                <p class="section-sub-title">If you have any issues or just questions<br>Feel free to write to us.</p>
             </div>
             <!-- End of Section Title -->
             <div class="row">
@@ -85,14 +86,8 @@
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                             </div>
-                            <div class="col-md-6 form-group">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone">
-                            </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="websiteUrl" name="websiteUrl" placeholder="Website">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
                             <div class="col-md-12 form-group">
                                 <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
@@ -114,7 +109,7 @@
                 <div class="col-md-3" data-aos="fade-up">
                     <span class="lnr lnr-location fs-40 py-4 d-block"></span>
                     <h5>LOCATION</h5>
-                    <p>Yogyakarta</p>
+                    <p>Slovenia</p>
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <span class="lnr lnr-clock fs-40 py-4 d-block"></span>
@@ -124,12 +119,12 @@
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
                     <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
                     <h5>CALL US</h5>
-                    <p>123-45678</p>
+                    <p>/</p>
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
                     <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
                     <h5>EMAIL</h5>
-                    <p>company@gmail.com</p>
+                    <p>/</p>
                 </div>
 
             </div>
