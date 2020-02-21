@@ -62,7 +62,7 @@
                 <?php
                                         //če je prijavljen - naj bo link na logout, če ne login 
                                         if (isset($_SESSION['user_id'])) {
-                                            echo '<li><a href="logout.php" class="nav-link">Log out</a></li>';
+                                            echo '<li><a href="logout.php" class="nav-link">Logout</a></li>';
                                         }
                                         else {
                                             echo '<li><a href="login.php" class="nav-link">Login</a></li>';

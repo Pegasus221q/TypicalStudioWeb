@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+    include_once './session.php';
+?>
+
 <head>
     <!--
      - Roxy: Bootstrap template by GettTemplates.com
@@ -56,9 +60,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
+                <?php
+                                        //če je prijavljen - naj bo link na logout, če ne login 
+                                        if (isset($_SESSION['user_id'])) {
+                                            echo '<li><a href="logout.php" class="nav-link">Logout</a></li>';
+                                        }
+                                        else {
+                                            echo '<li><a href="login.php" class="nav-link">Login</a></li>';
+                                        }
+                                    ?>
             </ul>
         </div>
     </div>
@@ -132,19 +142,6 @@
     </div>
 </section>
 <!-- End of Contact Form Section -->		<!-- Features Section-->
-<section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
-    <div class="container">
-        <div class="section-content" data-aos="fade-up">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="mb-2">Make a beautiful website, or million of them</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, veritatis qui eligendi delectus quia fuga!</p>
-                    <a class="btn btn-outline-primary btn-lg">FEATURES</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- End of Features Section-->		<footer class="mastfoot my-3">
     <div class="inner container">
          <div class="row">

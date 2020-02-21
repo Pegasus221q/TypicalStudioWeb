@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+    include_once './session.php';
+?>
+
 <head>
     <!--
      - Roxy: Bootstrap template by GettTemplates.com
@@ -83,9 +87,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
+                <?php
+                                        //če je prijavljen - naj bo link na logout, če ne login 
+                                        if (isset($_SESSION['user_id'])) {
+                                            echo '<li><a href="logout.php" class="nav-link">Logout</a></li>';
+                                        }
+                                        else {
+                                            echo '<li><a href="login.php" class="nav-link">Login</a></li>';
+                                        }
+                                    ?>
             </ul>
         </div>
     </div>

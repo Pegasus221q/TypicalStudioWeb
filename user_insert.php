@@ -2,11 +2,11 @@
 include_once './session.php';
 include_once './database.php';
 
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$email = $_POST['email'];
-$pass1 = $_POST['pass1'];
-$pass2 = $_POST['pass2'];
+$first_name = mysqli_real_escape_string($link, $_POST['first_name']);
+$last_name = mysqli_real_escape_string($link, $_POST['last_name']);
+$email = mysqli_real_escape_string($link, $_POST['email']);
+$pass1 = mysqli_real_escape_string($link, $_POST['pass1']);
+$pass2 = mysqli_real_escape_string($link, $_POST['pass2']);
 
 //preverim. če je uporabnik pravilno izpolnil obrazec
 if (!empty($first_name) && !empty($last_name) && !empty($email)

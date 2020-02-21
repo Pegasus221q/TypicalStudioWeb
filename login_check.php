@@ -2,8 +2,8 @@
     include_once './session.php';
     include_once './database.php';
 
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
+    $email = mysqli_real_escape_string($link,$_POST['email']);
+    $pass = mysqli_real_escape_string($link, $_POST['pass']);
     
     if (!empty($email) && !empty($pass)) {
         //pripravimo geslo
