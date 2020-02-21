@@ -8,6 +8,8 @@ $email = mysqli_real_escape_string($link, $_POST['email']);
 $pass1 = mysqli_real_escape_string($link, $_POST['pass1']);
 $pass2 = mysqli_real_escape_string($link, $_POST['pass2']);
      
+$pass = $salt.$pass1;
+$pass = sha1($pass);
         
         if (!empty($first_name) && !empty($last_name) && !empty($email)
         && !empty($pass1) && ($pass1==$pass2))
@@ -16,21 +18,22 @@ $pass2 = mysqli_real_escape_string($link, $_POST['pass2']);
             $sql = "SELECT * FROM users where email='$email'";
             $result = mysqli_query($link, $sql);
             // if($result == NULL)
-            if(mysqli_num_rows($result) >= 1)
+            if(mysqli_num_rows($result) == 1)
             {
                 echo "User with this email exits!";
 
             }else
             {
 
-                 //vse ok
-    $pass = $salt.$pass1;
-    $pass = sha1($pass);
-                $query = "INSERT INTO users(first_name,last_name,email,pass) "
-            . "VALUES ('$first_name','$last_name','$email','$pass')";
-    mysqli_query($link, $query);
+                
 
-    //header('Location:  index.php');
+    echo $first_name . "    " . $last_name . "  " . $email . "  " . $pass;
+
+
+    $query = "INSERT INTO users (first_name, last_name, email, pass, avatar) VALUES ('$first_name','$last_name','$email','$pass', NULL)";
+
+            mysqli_query($link, $query);
+    //header('Location:  login.php');
                 
             }
             
