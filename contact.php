@@ -3,6 +3,15 @@
 
 <?php
     include_once './session.php';
+
+    if ($_SESSION != NULL)
+    {
+        $first_name = $_SESSION['first_name'];
+        $last_name = $_SESSION['last_name'];
+        $avatar = $_SESSION['avatar'];
+        $username = $_SESSION['username'];
+    
+    }
 ?>
 
 <head>
@@ -36,11 +45,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 </head>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+<div id="side-nav" class="sidenav">
+	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
+	
+	<div class="sidenav-content">
+		<p>
+        <?php
+                                        //če je prijavljen - naj bo link na logout, če ne login 
+                                        if (isset($_SESSION['user_id'])) {
+                                            echo '<div class="testi-img mr-2">';
+                                            ?>
+
+                                            <img src="<?php echo $avatar; ?>" alt="Loading...">
+                                            <?php
+                                            echo '<span class="fs-16 primary-color">   ' , $first_name ,' ', $last_name , '   </span></div>';
+                                            echo '<br><a href="logout.php" class="nav-link">Logout</a>';
+                                        }
+                                        else {
+                                            echo '<a href="login.php" class="nav-link">Login</a>';
+                                        }
+                                    ?>
+		</p>
+	</div>
+</div>
 <body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
 	<div class="boxed-page">
 		<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center text-white" href="/">
+        <a class="navbar-brand d-flex align-items-center text-white">
             <h3 class="font-weight-bolder mb-0">TYPICAL STUDIO</h3>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,15 +93,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                <?php
-                                        //če je prijavljen - naj bo link na logout, če ne login 
-                                        if (isset($_SESSION['user_id'])) {
-                                            echo '<li><a href="logout.php" class="nav-link">Logout</a></li>';
-                                        }
-                                        else {
-                                            echo '<li><a href="login.php" class="nav-link">Login</a></li>';
-                                        }
-                                    ?>
+                <li class="nav-item only-desktop">
+                    <a class="nav-link" id="side-nav-open" href="#">
+                        <span class="lnr lnr-menu"></span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

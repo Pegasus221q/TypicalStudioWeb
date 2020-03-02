@@ -3,6 +3,15 @@
 
 <?php
     include_once './session.php';
+
+    if ($_SESSION != NULL)
+    {
+        $first_name = $_SESSION['first_name'];
+        $last_name = $_SESSION['last_name'];
+        $avatar = $_SESSION['avatar'];
+        $username = $_SESSION['username'];
+    }
+
 ?>
 
 <head>
@@ -37,6 +46,38 @@
 
 </head>
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
+	<div id="side-nav" class="sidenav">
+	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
+	
+	<div class="sidenav-content">
+		<p>
+        <?php
+                                        //če je prijavljen - naj bo link na logout, če ne login 
+                                        if (isset($_SESSION['user_id'])) {
+                                            echo '<span class="fs-16 primary-color"><h3>Welcome</h3></span>';
+                                            echo '<br><div class="testi-img mr-2">';
+                                            ?>
+
+                                            <img src="<?php echo $avatar; ?>" alt="Loading...">
+                                            <?php
+                                            if($username == NULL)
+                                            {
+                                                echo '<span class="fs-16 primary-color">   ' , $first_name ,' ', $last_name , '   </span></div>';
+                                            }
+                                            else
+                                            {
+                                                echo '<span class="fs-16 primary-color">   ' , $username , '   </span></div>';
+                                            }
+                                            echo '<br><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
+                                        }
+                                        else {
+                                            echo '<a href="login.php" class="nav-link">Login</a>';
+                                        }
+                                    ?>
+		</p>
+	</div>
+</div>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
 	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center text-white">
@@ -59,15 +100,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                <?php
-                                        //če je prijavljen - naj bo link na logout, če ne login 
-                                        if (isset($_SESSION['user_id'])) {
-                                            echo '<li><a href="logout.php" class="nav-link">Logout</a></li>';
-                                        }
-                                        else {
-                                            echo '<li><a href="login.php" class="nav-link">Login</a></li>';
-                                        }
-                                    ?>
+                <li class="nav-item only-desktop">
+                    <a class="nav-link" id="side-nav-open" href="#">
+                        <span class="lnr lnr-menu"></span>
+                    </a>
+                </li>
 
             </ul>
         </div>
