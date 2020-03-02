@@ -20,20 +20,16 @@ $pass = sha1($pass);
             // if($result == NULL)
             if(mysqli_num_rows($result) == 1)
             {
-                echo "User with this email exits!";
-
+                //echo "User with this email exits!";
+                header("Location: registration.php");
             }else
             {
 
-                
 
-    echo $first_name . "    " . $last_name . "  " . $email . "  " . $pass;
-
-
-    $query = "INSERT INTO users (first_name, last_name, email, pass, avatar) VALUES ('$first_name','$last_name','$email','$pass', NULL)";
+    $query = "INSERT INTO users (first_name, last_name, email, pass) VALUES ('$first_name','$last_name','$email','$pass')";
 
             mysqli_query($link, $query);
-    //header('Location:  login.php');
+    header('Location:  login.php');
                 
             }
             
