@@ -12,7 +12,8 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roxy by GetTemplates.co</title>
+    <link rel="icon" href="img/just logo.png">
+    <title>Typical Studio</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -41,7 +42,15 @@
 	
 	<div class="sidenav-content">
 		<p>
-			Kuncen WB1, Wirobrajan 10010, DIY
+        <?php
+                                        //če je prijavljen - naj bo link na logout, če ne login 
+                                        if (isset($_SESSION['user_id'])) {
+                                            echo '<a href="logout.php" class="nav-link">Logout</a>';
+                                        }
+                                        else {
+                                            echo '<a href="login.php" class="nav-link">Login</a>';
+                                        }
+                                    ?>
 		</p>
 		<p>
 			<span class="fs-16 primary-color">(+68) 120034509</span>
@@ -87,15 +96,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                <?php
-                                        //če je prijavljen - naj bo link na logout, če ne login 
-                                        if (isset($_SESSION['user_id'])) {
-                                            echo '<li><a href="logout.php" class="nav-link">Logout</a></li>';
-                                        }
-                                        else {
-                                            echo '<li><a href="login.php" class="nav-link">Login</a></li>';
-                                        }
-                                    ?>
+                <li class="nav-item only-desktop">
+                    <a class="nav-link" id="side-nav-open" href="#">
+                        <span class="lnr lnr-menu"></span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
