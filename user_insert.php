@@ -21,7 +21,7 @@ $pass = sha1($pass);
             if(mysqli_num_rows($result) == 1)
             {
                 //echo "User with this email exits!";
-                header("Location: registration.php");
+                header("Location: registration1.php");
             }else
             {
 
