@@ -11,6 +11,7 @@
         $avatar = $_SESSION['avatar'];
         $username = $_SESSION['username'];
         $banner = $_SESSION['banner'];
+        $pass = $_SESSION['pass'];
     
     }
     else
@@ -138,21 +139,56 @@
         <div class="section-content">
             <!-- Section Title -->
             <div class="title-wrap" data-aos="fade-up">
-                <h1 class="section-title"  style="font-weight:bold;">User Info</h1>
+                <h1 class="section-title"  style="font-weight:bold;">Change User Info</h1>
             </div>
             <!-- End of Section Title -->
             <div class="row">
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" style="border:1px solid black; border-radius:8px;" data-aos="fade-up">
-                <p><span style="font-weight:bold; font-size: 30px;">Username: </span><?php echo '<span style="font-size:30px;">',$username,'</span>' ?></p>
-                <p><span style="font-weight:bold; font-size: 30px;">Name: </span><?php echo '<span style="font-size:30px;">',$first_name,'</span>' ?></p>
-                <p><span style="font-weight:bold; font-size: 30px;">Last Name: </span><?php echo '<span style="font-size:30px;">',$last_name,'</span>' ?></p>
-                <p><span style="font-weight:bold; font-size: 30px;">Email: </span><?php echo '<span style="font-size:30px;">',$_SESSION['email'],'</span>' ?></p>
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Username: </span>
+                    <input type="text" class="form-control" id="name" name="username" value="<?php echo $username; ?>">
                 </div>
-                <div style="width:30px;">
-                    <a href="user_edit.php"><img src="img/edit_icon.png"></a>
+
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Name: </span>
+                    <input type="text" class="form-control" id="name" name="name" value="<?php echo $first_name;?>">
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Last Name: </span>
+                    <input type="text" class="form-control" id="name" name="lastname" value="<?php echo $last_name;?>">
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Password: </span>
+                    <input type="password" class="form-control" id="name" name="pass1" value="<?php echo $pass;?>">
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Confirm Password: </span>
+                    <input type="password" class="form-control" id="name" name="pass2" value="<?php echo $pass;?>">
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Profile Picture: </span>
+                    <input type="file" class="form-control" id="name" name="pp">
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <span style="font-weight:bold; font-size: 30px;">Profile Banner: </span>
+                    <input type="file" class="form-control" id="name" name="pb">
+                </div>
+
                 </div>
             </div>
+                <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
+                <div style="float:left;">
+                    <a href="user.php"><button class="btn btn-primary btn-shadow btn-lg">Back</button></a>
+                </div>
+                <div style="float:right;">
+                    <a href="user.php"><button class="btn btn-primary btn-shadow btn-lg">Save</button></a></div>
+                </div>
         </div>
     </div>
 </section>

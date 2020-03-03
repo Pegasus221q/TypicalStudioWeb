@@ -25,6 +25,8 @@
             $_SESSION['admin']=$user['admin'];
             $_SESSION['avatar']=$user['avatar'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['banner'] = $user['banner'];
+            $_SESSION['pass'] = $user['pass'];
             
             //preusmeritev na login
             header("Location: index.php");
