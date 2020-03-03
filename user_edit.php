@@ -161,16 +161,6 @@
                 </div>
 
                 <div class="col-md-12 form-group">
-                    <span style="font-weight:bold; font-size: 30px;">Password: </span>
-                    <input type="password" class="form-control" id="name" name="pass1" value="<?php echo $pass;?>">
-                </div>
-
-                <div class="col-md-12 form-group">
-                    <span style="font-weight:bold; font-size: 30px;">Confirm Password: </span>
-                    <input type="password" class="form-control" id="name" name="pass2" value="<?php echo $pass;?>">
-                </div>
-
-                <div class="col-md-12 form-group">
                     <span style="font-weight:bold; font-size: 30px;">Profile Picture: </span>
                     <input type="file" class="form-control" id="name" name="pp">
                 </div>
@@ -187,7 +177,7 @@
                     <a href="user.php"><button class="btn btn-primary btn-shadow btn-lg">Back</button></a>
                 </div>
                 <div style="float:right;">
-                    <a href="user.php"><button class="btn btn-primary btn-shadow btn-lg">Save</button></a></div>
+                    <a href="user_save.php"><button class="btn btn-primary btn-shadow btn-lg">Save</button></a></div>
                 </div>
         </div>
     </div>
