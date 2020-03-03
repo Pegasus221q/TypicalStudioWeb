@@ -115,7 +115,7 @@
     </div>
 </nav>
 
-<div class="jumbotron2 jumbotron-single d-flex align-items-center" style="background-image: url(img/Group_2.jpg)">
+<div class="jumbotron2 jumbotron-single d-flex align-items-center" style="background-image: url(img/DD_01.png)">
   <div class="container text-center">
 
 
@@ -123,11 +123,11 @@
     <br>
     <?php if($username == NULL)
                                             {
-                                                echo '<span class="font-weight-bolder mb-0">   ' , $first_name ,' ', $last_name , '   </span></div>';
+                                                echo '<span style="color:white;" class="font-weight-bolder mb-0">   ' , $first_name ,' ', $last_name , '   </span></div>';
                                             }
                                             else
                                             {
-                                                echo '<span class="font-weight-bolder mb-0">   ' , $username , '   </span></div>';
+                                                echo '<span style="color:white;" class="font-weight-bolder mb-0">   ' , $username , '</span></div>';
                                             }  ?>
     </h1>
   </div>
@@ -137,59 +137,20 @@
         <div class="section-content">
             <!-- Section Title -->
             <div class="title-wrap" data-aos="fade-up">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-sub-title">If you have any issues or just questions<br>Feel free to write to us.</p>
+                <h1 class="section-title"  style="font-weight:bold;">User Info</h1>
             </div>
             <!-- End of Section Title -->
             <div class="row">
                 <!-- Contact Form Holder -->
-                <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
-                    <form method="post" name="contact-us" action="">
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="col-md-8 offset-md-2 contact-form-holder mt-4" style="border:1px solid black; border-radius:8px;" data-aos="fade-up">
+                <p><span style="font-weight:bold; font-size: 30px;">Username: </span><?php echo '<span style="font-size:30px;">',$username,'</span>' ?></p>
+                <p><span style="font-weight:bold; font-size: 30px;">Name: </span><?php echo '<span style="font-size:30px;">',$first_name,'</span>' ?></p>
+                <p><span style="font-weight:bold; font-size: 30px;">Last Name: </span><?php echo '<span style="font-size:30px;">',$last_name,'</span>' ?></p>
+                <p><span style="font-weight:bold; font-size: 30px;">Email: </span><?php echo '<span style="font-size:30px;">',$_SESSION['email'],'</span>' ?></p>
                 </div>
-                <!-- End of Contact Form Holder -->
-            </div>
-        </div>
-        <div class="section-content pt-0">
-            <div class="title-wrap" data-aos="fade-up">
-                <h2 class="section-title">Where To Find Us?</h2>
-            </div>
-            <div class="row text-center mt-4">
-                <div class="col-md-3" data-aos="fade-up">
-                    <span class="lnr lnr-location fs-40 py-4 d-block"></span>
-                    <h5>LOCATION</h5>
-                    <p>Slovenia</p>
+                <div style="width:30px;">
+                    <a href="user_edit.php"><img src="img/edit_icon.png"></a>
                 </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <span class="lnr lnr-clock fs-40 py-4 d-block"></span>
-                    <h5>WORKING TIME</h5>
-                    <p>Monday - Saturday</p>
-                </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-                    <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
-                    <h5>CALL US</h5>
-                    <p>/</p>
-                </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-                    <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
-                    <h5>EMAIL</h5>
-                    <p>/</p>
-                </div>
-
             </div>
         </div>
     </div>
