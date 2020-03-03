@@ -12,6 +12,10 @@
         $username = $_SESSION['username'];
     
     }
+    else
+    {
+        header("Location: index.php");
+    }
 ?>
 
 <head>
@@ -116,6 +120,15 @@
 
 
     <h1 class="display-2 mb-4"><div class="testi-img2 mr-2"><img src="<?php echo $avatar; ?>" alt="Loading..."></div>
+    <br>
+    <?php if($username == NULL)
+                                            {
+                                                echo '<span class="font-weight-bolder mb-0">   ' , $first_name ,' ', $last_name , '   </span></div>';
+                                            }
+                                            else
+                                            {
+                                                echo '<span class="font-weight-bolder mb-0">   ' , $username , '   </span></div>';
+                                            }  ?>
     </h1>
   </div>
 </div>		<!-- Contact Form Section -->
