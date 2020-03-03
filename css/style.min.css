@@ -101,6 +101,39 @@ section {
   margin-bottom: 0;
   overflow: hidden;
   min-height: 100vh; }
+
+  .jumbotron2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-height: 100vh; }
+
+    @media (max-width: 767px) and (orientation: landscape) {
+      .jumbotron2 {
+        min-height: 500px; } }
+    .jumbotron2 .container {
+      position: relative;
+      z-index: 1; }
+    .jumbotron2:before {
+      position: absolute;
+      display: block;
+      content: "";
+      opacity: 0.8;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #EBEBEB;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FF6100, #EBEBEB);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FF6100, #EBEBEB);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
   @media (max-width: 767px) and (orientation: landscape) {
     .jumbotron {
       min-height: 500px; } }
@@ -412,6 +445,12 @@ section {
   width: 60px !important;
   border-radius: 50%;
   display: inline-block !important; }
+
+  .testi-img2 img {
+    height: 500px;
+    width: 500px !important;
+    border-radius: 50%;
+    display: inline-block !important; }
 
 .testi-details {
   text-align: left; }

@@ -46,7 +46,7 @@
 
 </head>
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
-	<div id="side-nav" class="sidenav">
+<div id="side-nav" class="sidenav">
 	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
 	
 	<div class="sidenav-content">
@@ -68,7 +68,7 @@
                                             {
                                                 echo '<span class="fs-16 primary-color">   ' , $username , '   </span></div>';
                                             }
-                                            echo '<br><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
+                                            echo '<br><a href="user.php" class="nav-link">Settings</a><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
                                         }
                                         else {
                                             echo '<a href="login.php" class="nav-link">Login</a>';

@@ -54,13 +54,21 @@
         <?php
                                         //če je prijavljen - naj bo link na logout, če ne login 
                                         if (isset($_SESSION['user_id'])) {
-                                            echo '<div class="testi-img mr-2">';
+                                            echo '<span class="fs-16 primary-color"><h3>Welcome</h3></span>';
+                                            echo '<br><div class="testi-img mr-2">';
                                             ?>
 
                                             <img src="<?php echo $avatar; ?>" alt="Loading...">
                                             <?php
-                                            echo '<span class="fs-16 primary-color">   ' , $first_name ,' ', $last_name , '   </span></div>';
-                                            echo '<br><a href="logout.php" class="nav-link">Logout</a>';
+                                            if($username == NULL)
+                                            {
+                                                echo '<span class="fs-16 primary-color">   ' , $first_name ,' ', $last_name , '   </span></div>';
+                                            }
+                                            else
+                                            {
+                                                echo '<span class="fs-16 primary-color">   ' , $username , '   </span></div>';
+                                            }
+                                            echo '<br><a href="user.php" class="nav-link">Settings</a><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
                                         }
                                         else {
                                             echo '<a href="login.php" class="nav-link">Login</a>';
