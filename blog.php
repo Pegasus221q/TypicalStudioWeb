@@ -152,7 +152,7 @@
                                         <a href="#"><h6><small>CODE</small></h6></a>
                                     </div>
                                     <div class="blog-title">
-                                        <a href="single.html"><h4>Amazing Blog Title</h4></a>
+                                        <a href="single.php"><h4>Amazing Blog Title</h4></a>
                                     </div>
                                     <div class="blog-meta">
                                         <p class="blog-date">30 May 2016</p> /
