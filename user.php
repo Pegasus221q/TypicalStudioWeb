@@ -149,9 +149,12 @@
                 <p><span style="font-weight:bold; font-size: 30px;">Last Name: </span><?php echo '<span style="font-size:30px;">',$last_name,'</span>' ?></p>
                 <p><span style="font-weight:bold; font-size: 30px;">Email: </span><?php echo '<span style="font-size:30px;">',$_SESSION['email'],'</span>' ?></p>
                 </div>
-                <div style="width:30px;">
-                    <a href="user_edit.php"><img src="img/edit_icon.png"></a>
-                </div>
+<?php
+            
+                echo '<div style="width:30px;">';
+                echo    '<a href="user_edit.php"><img src="img/edit_icon.png"></a>';
+                echo '</div>';
+?>
             </div>
         </div>
     </div>

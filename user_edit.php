@@ -145,6 +145,7 @@
             <div class="row">
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" style="border:1px solid black; border-radius:8px;" data-aos="fade-up">
+                <form method="post" name="edit" action="user_save.php">
                 <div class="col-md-12 form-group">
                     <span style="font-weight:bold; font-size: 30px;">Username: </span>
                     <input type="text" class="form-control" id="name" name="username" value="<?php echo $username; ?>">
@@ -179,6 +180,7 @@
                 <div style="float:right;">
                     <a href="user_save.php"><button class="btn btn-primary btn-shadow btn-lg">Save</button></a></div>
                 </div>
+            </form>
         </div>
     </div>
 </section>
