@@ -7,6 +7,9 @@
     $first_name = mysqli_real_escape_string($link, $_POST['name']);
     $last_name = mysqli_real_escape_string($link, $_POST['lastname']);
     $username = mysqli_real_escape_string($link,$_POST['username']);
+    $avatar = $_SESSION['avatar'];
+    $banner = $_SESSION['banner'];
+
 
 
     if($first_name != $_SESSION['first_name'])
@@ -48,6 +51,10 @@
                     } else {
                         echo "File is not an image.";
                         $uploadOk = 0;
+
+                        $query11 = "UPDATE users SET avatar = '$avatar' WHERE (id = '$user_id')";
+
+                        mysqli_query($link, $query11);
     }
 }
         // Check if file already exists
@@ -55,20 +62,26 @@
                 echo "Sorry, file already exists.";
                 $uploadOk = 0;
 
-                $query4 = "UPDATE users SET avatar = '$target_file' WHERE (id = '$user_id')";
+                $query41 = "UPDATE users SET avatar = '$target_file' WHERE (id = '$user_id')";
 
-                mysqli_query($link, $query4);
+                mysqli_query($link, $query41);
             }
             // Check file size
             if ($_FILES["fileToUpload"]["size"] > 1000000) {
                 echo "Sorry, your file is too large.";
                 $uploadOk = 0;
+                $query42 = "UPDATE users SET avatar = '$avatar' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query42);
             }
             // Allow certain file formats
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif" ) {
                 echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                 $uploadOk = 0;
+                $query43 = "UPDATE users SET avatar = '$avatar' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query43);
             }
             // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
@@ -85,7 +98,7 @@
 
 
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    echo "Sorry, there was an error uploading your file.<br>";
     }
 }
     }
@@ -105,6 +118,9 @@
                     } else {
                         echo "File is not an image.";
                         $uploadOk = 0;
+                        $query31 = "UPDATE users SET banner = '$banner' WHERE (id = '$user_id')";
+
+                        mysqli_query($link, $query31);
     }
 }
         // Check if file already exists
@@ -120,12 +136,18 @@
             if ($_FILES["fileToUpload1"]["size"] > 2500000) {
                 echo "Sorry, your file is too large.";
                 $uploadOk = 0;
+                $query32 = "UPDATE users SET banner = '$banner' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query32);
             }
             // Allow certain file formats
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif" ) {
                 echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                 $uploadOk = 0;
+                $query33 = "UPDATE users SET banner = '$banner' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query33);
             }
             // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
@@ -143,9 +165,6 @@
                     echo "Sorry, there was an error uploading your file.";
     }
 }
-    }else{
-
-
     }
 
     header("location:session_update.php");
