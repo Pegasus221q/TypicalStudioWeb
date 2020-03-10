@@ -32,6 +32,13 @@
 
     }
 
+    if($profilep != $_SESSION["avatar"])
+    {
+        $query2 = "UPDATE users SET username = '$username' WHERE (id = '$user_id')";
+
+        mysqli_query($link, $query2);
+    }
+
     header("location:session_update.php");
 
 ?>
