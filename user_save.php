@@ -8,6 +8,12 @@
     $last_name = mysqli_real_escape_string($link, $_POST['lastname']);
     $username = mysqli_real_escape_string($link,$_POST['username']);
 
+    if ($_FILES["fileToUpload"] != NULL)
+    {
+        echo $_FILES["fileToUpload"];
+    }
+
+
     if($first_name != $_SESSION['first_name'])
     {
         $query = "UPDATE users SET first_name = '$first_name' WHERE (id = '$user_id')";
@@ -34,6 +40,8 @@
     {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        
+
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
@@ -52,7 +60,7 @@
                 echo "Sorry, file already exists.";
                 $uploadOk = 0;
 
-                $query4 = "UPDATE users SET banner = '$target_file1' WHERE (id = '$user_id')";
+                $query4 = "UPDATE users SET avatar = '$target_file1' WHERE (id = '$user_id')";
 
                 mysqli_query($link, $query4);
             }
