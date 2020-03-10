@@ -34,9 +34,9 @@
 
     if($profilep != $_SESSION["avatar"])
     {
-        $query2 = "UPDATE users SET username = '$username' WHERE (id = '$user_id')";
+        $query3 = "UPDATE users SET avatar = '$profilep' WHERE (id = '$user_id')";
 
-        mysqli_query($link, $query2);
+        mysqli_query($link, $query3);
     }
 
     header("location:session_update.php");
