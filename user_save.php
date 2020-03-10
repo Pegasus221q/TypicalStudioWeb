@@ -8,11 +8,6 @@
     $last_name = mysqli_real_escape_string($link, $_POST['lastname']);
     $username = mysqli_real_escape_string($link,$_POST['username']);
 
-    if ($_FILES["fileToUpload"] != NULL)
-    {
-        echo $_FILES["fileToUpload"];
-    }
-
 
     if($first_name != $_SESSION['first_name'])
     {
@@ -60,7 +55,7 @@
                 echo "Sorry, file already exists.";
                 $uploadOk = 0;
 
-                $query4 = "UPDATE users SET avatar = '$target_file1' WHERE (id = '$user_id')";
+                $query4 = "UPDATE users SET avatar = '$target_file' WHERE (id = '$user_id')";
 
                 mysqli_query($link, $query4);
             }
@@ -148,6 +143,9 @@
                     echo "Sorry, there was an error uploading your file.";
     }
 }
+    }else{
+
+
     }
 
     header("location:session_update.php");

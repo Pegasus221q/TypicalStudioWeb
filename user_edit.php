@@ -163,12 +163,12 @@
 
                 <div class="col-md-12 form-group">
                     <span style="font-weight:bold; font-size: 30px;">Profile Picture: </span>
-                    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
+                    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload" value="<?php echo $avatar;?>">
                 </div>
 
                 <div class="col-md-12 form-group">
                     <span style="font-weight:bold; font-size: 30px;">Profile Banner: </span>
-                    <input type="file" class="form-control" name="fileToUpload1" id="fileToUpload1">
+                    <input type="file" class="form-control" name="fileToUpload1" id="fileToUpload1" value="<?php echo $banner;?>">
                 </div>
 
                 </div>
