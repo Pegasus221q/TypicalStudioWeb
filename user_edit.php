@@ -163,7 +163,7 @@
 
                 <div class="col-md-12 form-group">
                     <span style="font-weight:bold; font-size: 30px;">Profile Picture: </span>
-                    <input type="file" class="form-control" id="name" name="pp">
+                    <input type="file" class="form-control" id="name" name="pp" value="<?php echo $avatar; ?>">
                 </div>
 
                 <div class="col-md-12 form-group">
@@ -178,7 +178,7 @@
                     <a href="user.php"><button class="btn btn-primary btn-shadow btn-lg">Back</button></a>
                 </div>
                 <div style="float:right;">
-                    <a href="user_save.php"><button class="btn btn-primary btn-shadow btn-lg">Save</button></a></div>
+                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Save</button></div>
                 </div>
             </form>
         </div>
