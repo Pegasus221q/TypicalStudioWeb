@@ -7,8 +7,7 @@
     $first_name = mysqli_real_escape_string($link, $_POST['name']);
     $last_name = mysqli_real_escape_string($link, $_POST['lastname']);
     $username = mysqli_real_escape_string($link,$_POST['username']);
-    $profilep = mysqli_real_escape_string($link, $_POST['pp']);
-    $profileb = mysqli_real_escape_string($link,$_POST['pb']);
+
 
     if($first_name != $_SESSION['first_name'])
     {
@@ -32,7 +31,7 @@
 
     }
 
-    if($profilep != NULL)
+    if($_FILES['fileToUpload'] != NULL)
     {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -55,7 +54,7 @@
                 $uploadOk = 0;
             }
             // Check file size
-            if ($_FILES["fileToUpload"]["size"] > 500000) {
+            if ($_FILES["fileToUpload"]["size"] > 1000000) {
                 echo "Sorry, your file is too large.";
                 $uploadOk = 0;
             }
@@ -72,21 +71,28 @@
             } else {
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+
+                $query3 = "UPDATE users SET avatar = uploads/$_FILES["fileToUpload"]' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query3);
+
+
+
                 } else {
                     echo "Sorry, there was an error uploading your file.";
     }
 }
     }
 
-    if($profileb != NULL)
+    if($_FILES['fileToUpload1'] != NULL)
     {
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_file = $target_dir . basename($_FILES["fileToUpload1"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
             if(isset($_POST["submit"])) {
-                $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+                $check = getimagesize($_FILES["fileToUpload1"]["tmp_name"]);
                     if($check !== false) {
                         echo "File is an image - " . $check["mime"] . ".";
                         $uploadOk = 1;
@@ -101,7 +107,7 @@
                 $uploadOk = 0;
             }
             // Check file size
-            if ($_FILES["fileToUpload"]["size"] > 500000) {
+            if ($_FILES["fileToUpload1"]["size"] > 2500000) {
                 echo "Sorry, your file is too large.";
                 $uploadOk = 0;
             }
@@ -116,8 +122,8 @@
                 echo "Sorry, your file was not uploaded.";
                 // if everything is ok, try to upload file
             } else {
-                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+                if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["fileToUpload1"]["name"]). " has been uploaded.";
                 } else {
                     echo "Sorry, there was an error uploading your file.";
     }
