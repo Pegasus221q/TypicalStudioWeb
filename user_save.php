@@ -8,7 +8,6 @@
     $last_name = mysqli_real_escape_string($link, $_POST['lastname']);
     $username = mysqli_real_escape_string($link,$_POST['username']);
 
-
     if($first_name != $_SESSION['first_name'])
     {
         $query = "UPDATE users SET first_name = '$first_name' WHERE (id = '$user_id')";
@@ -52,6 +51,10 @@
             if (file_exists($target_file)) {
                 echo "Sorry, file already exists.";
                 $uploadOk = 0;
+
+                $query4 = "UPDATE users SET banner = '$target_file1' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query4);
             }
             // Check file size
             if ($_FILES["fileToUpload"]["size"] > 1000000) {
@@ -72,7 +75,7 @@
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
-                $query3 = "UPDATE users SET avatar = uploads/$_FILES["fileToUpload"]' WHERE (id = '$user_id')";
+                $query3 = "UPDATE users SET avatar = '$target_file' WHERE (id = '$user_id')";
 
                 mysqli_query($link, $query3);
 
@@ -87,9 +90,9 @@
     if($_FILES['fileToUpload1'] != NULL)
     {
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES["fileToUpload1"]["name"]);
+        $target_file1 = $target_dir . basename($_FILES["fileToUpload1"]["name"]);
         $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($target_file1,PATHINFO_EXTENSION));
         // Check if image file is a actual image or fake image
             if(isset($_POST["submit"])) {
                 $check = getimagesize($_FILES["fileToUpload1"]["tmp_name"]);
@@ -102,9 +105,13 @@
     }
 }
         // Check if file already exists
-            if (file_exists($target_file)) {
+            if (file_exists($target_file1)) {
                 echo "Sorry, file already exists.";
                 $uploadOk = 0;
+
+                $query4 = "UPDATE users SET banner = '$target_file1' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query4);
             }
             // Check file size
             if ($_FILES["fileToUpload1"]["size"] > 2500000) {
@@ -122,9 +129,14 @@
                 echo "Sorry, your file was not uploaded.";
                 // if everything is ok, try to upload file
             } else {
-                if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $target_file)) {
+                if (move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $target_file1)) {
                 echo "The file ". basename( $_FILES["fileToUpload1"]["name"]). " has been uploaded.";
-                } else {
+
+                $query4 = "UPDATE users SET banner = '$target_file1' WHERE (id = '$user_id')";
+
+                mysqli_query($link, $query4);
+                }
+                else {
                     echo "Sorry, there was an error uploading your file.";
     }
 }
