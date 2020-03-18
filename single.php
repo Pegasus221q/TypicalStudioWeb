@@ -8,8 +8,8 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roxy by GetTemplates.co</title>
-    <meta name="description" content="Roxy">
+    <link rel="icon" href="img/just logo.png">
+    <title>Typical Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- External CSS -->
@@ -63,8 +63,8 @@
 	
 </div>	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center text-white" href="/">
-            <h3 class="font-weight-bolder mb-0">ROXY</h3>
+        <a class="navbar-brand d-flex align-items-center text-white">
+            <h3 class="font-weight-bolder mb-0">TYPICAL STUDIO</h3>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
             <span class="lnr lnr-menu"></span>
@@ -75,18 +75,13 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="about.html">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="blog.html">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a id="side-search-open" class="nav-link" href="#">
-                        <span class="lnr lnr-magnifier"></span>
-                    </a>
                 </li>
                  <li class="nav-item only-desktop">
                     <a class="nav-link" id="side-nav-open" href="#">

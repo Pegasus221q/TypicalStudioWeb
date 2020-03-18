@@ -143,20 +143,14 @@
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
                     <form method="post" name="post" action="post_insert.php">
                     <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Name">
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="tittle" name="tittle" placeholder="Tittle">
                             </div>
-                            <div class="col-md-6 form-group">
+                            <div class="col-md- form-group">
                                 <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Surname">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Password">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Re-enter Password">
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
                             </div>
                             <div class="col-md-12 text-center">
                                 <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Post</button>
