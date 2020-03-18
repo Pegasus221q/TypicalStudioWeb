@@ -149,9 +149,6 @@
                                     <a href="single.php"><img src="img/blog-1.jpg" alt=""></a>
                                 </div>
                                 <div class="blog-text">
-                                    <div class="blog-tag">
-                                        <a href="#"><h6><small>CODE</small></h6></a>
-                                    </div>
                                     <div class="blog-title">
                                         <a href="single.php"><h4>Amazing Blog Title</h4></a>
                                     </div>
