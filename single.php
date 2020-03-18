@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+    include_once './session.php';
+
+    if ($_SESSION != NULL)
+    {
+        $first_name = $_SESSION['first_name'];
+        $last_name = $_SESSION['last_name'];
+        $avatar = $_SESSION['avatar'];
+        $username = $_SESSION['username'];
+        $admin = $_SESSION['admin'];
+    
+    }
+?>
+
 <head>
     <!--
      - Roxy: Bootstrap template by GettTemplates.com
@@ -37,28 +51,30 @@
 	
 	<div class="sidenav-content">
 		<p>
-			Kuncen WB1, Wirobrajan 10010, DIY
-		</p>
-		<p>
-			<span class="fs-16 primary-color">(+68) 120034509</span>
-		</p>
-		<p>info@yourdomain.com</p>
-	</div>
-</div>	<div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
+        <?php
+                                        //če je prijavljen - naj bo link na logout, če ne login 
+                                        if (isset($_SESSION['user_id'])) {
+                                            echo '<span class="fs-16 primary-color"><h3>Welcome</h3></span>';
+                                            echo '<br><div class="testi-img mr-2">';
+                                            ?>
 
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<span class="lnr lnr-magnifier"></span>
-			    </button>
-			  </div>
-			</div>
-
-		</form>
+                                            <img src="<?php echo $avatar; ?>" alt="Loading...">
+                                            <?php
+                                            if($username == NULL)
+                                            {
+                                                echo '<span class="fs-16 primary-color">   ' , $first_name ,' ', $last_name , '   </span></div>';
+                                            }
+                                            else
+                                            {
+                                                echo '<span class="fs-16 primary-color">   ' , $username , '   </span></div>';
+                                            }
+                                            echo '<br><a href="user.php" class="nav-link">Settings</a><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
+                                        }
+                                        else {
+                                            echo '<a href="login.php" class="nav-link">Login</a>';
+                                        }
+                                    ?>
+		</p>
 	</div>
 	
 </div>	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
@@ -71,19 +87,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar-nav-header">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+            <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Games</a>
+                    <a class="nav-link" href="about.php">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">News</a>
+                    <a class="nav-link" href="blog.php">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                 <li class="nav-item only-desktop">
+                <li class="nav-item only-desktop">
                     <a class="nav-link" id="side-nav-open" href="#">
                         <span class="lnr lnr-menu"></span>
                     </a>

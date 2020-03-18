@@ -4,6 +4,16 @@
 <?php
     include_once './session.php';
 
+    if ($_SESSION != NULL)
+    {
+        $first_name = $_SESSION['first_name'];
+        $last_name = $_SESSION['last_name'];
+        $avatar = $_SESSION['avatar'];
+        $username = $_SESSION['username'];
+        $admin = $_SESSION['admin'];
+    
+    }
+
     if($_SESSION['admin'] != NULL)
     {
         
@@ -68,7 +78,7 @@
                                             {
                                                 echo '<span class="fs-16 primary-color">   ' , $username , '   </span></div>';
                                             }
-                                            echo '<br><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
+                                            echo '<br><a href="user.php" class="nav-link">Settings</a><br><br><br><br><br><br><br><br><br><a href="logout.php" class="nav-link">Logout</a>';
                                         }
                                         else {
                                             echo '<a href="login.php" class="nav-link">Login</a>';
