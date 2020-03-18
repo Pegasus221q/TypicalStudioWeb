@@ -4,15 +4,13 @@
 <?php
     include_once './session.php';
 
-    if ($_SESSION != NULL)
+    if($_SESSION['admin'] != NULL)
+    {
+        
+    }
+    else
     {
         header("Location: index.php");
-
-        $first_name = $_SESSION['first_name'];
-        $last_name = $_SESSION['last_name'];
-        $avatar = $_SESSION['avatar'];
-        $username = $_SESSION['username'];
-    
     }
 ?>
 
@@ -136,14 +134,14 @@
         <div class="section-content">
             <!-- Section Title -->
             <div class="title-wrap" data-aos="fade-up">
-                <h2 class="section-title" style="color: black; ">Register</h2>
-                <p class="section-sub-title" style="color: black; ">By making an account you have access to a lot more content.</p>
+                <h2 class="section-title" style="color: black; ">Post</h2>
+                <p class="section-sub-title" style="color: black; ">Make a post for normal users and other admins to see.</p>
             </div>
             <!-- End of Section Title -->
             <div class="row">
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
-                    <form method="post" name="login" action="user_insert.php">
+                    <form method="post" name="post" action="post_insert.php">
                     <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Name">
@@ -161,7 +159,7 @@
                                 <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Re-enter Password">
                             </div>
                             <div class="col-md-12 text-center">
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Register</button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Post</button>
                             </div>
                         </div>
                     </form>

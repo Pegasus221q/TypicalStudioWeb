@@ -10,6 +10,7 @@
         $last_name = $_SESSION['last_name'];
         $avatar = $_SESSION['avatar'];
         $username = $_SESSION['username'];
+        $admin = $_SESSION['admin'];
     
     }
 ?>
@@ -246,6 +247,15 @@
                             </div>
                         </div>
                         <!-- End of Blog Item -->
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                    <?php 
+                        if($admin != NULL)
+                        {
+                            echo '<a href="post.php" class="btn btn-primary btn-shadow btn-lg">Post</a>';
+                        }
+                    ?>
                     </div>
                 </div>
                 <!-- End of Blog -->
