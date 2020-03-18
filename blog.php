@@ -146,7 +146,7 @@
                         <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
                             <div class="blog-item">
                                 <div class="blog-img">
-                                    <a href="single.html"><img src="img/blog-1.jpg" alt=""></a>
+                                    <a href="single.php"><img src="img/blog-1.jpg" alt=""></a>
                                 </div>
                                 <div class="blog-text">
                                     <div class="blog-tag">
