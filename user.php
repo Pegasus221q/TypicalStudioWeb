@@ -101,7 +101,7 @@
                     <a class="nav-link" href="about.php">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.php">About</a>
+                    <a class="nav-link" href="blog.php">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>

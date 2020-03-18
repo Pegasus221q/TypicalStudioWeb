@@ -110,7 +110,7 @@
                     <a class="nav-link" href="about.php">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.php">About</a>
+                    <a class="nav-link" href="blog.php">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
@@ -125,9 +125,9 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
+<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/DD_1.png)">
   <div class="container text-center">
-    <h1 class="display-2 mb-4">Blog</h1>
+    <h1 class="display-2 mb-4">News</h1>
   </div>
 </div>	<!-- Blog Section -->
 <section id="blog" class="bg-grey">
@@ -135,7 +135,7 @@
         <div class="section-content">
             <div class="title-wrap mb-5" data-aos="fade-up">
                 <h2 class="section-title">Latest <b>news</b></h2>
-                <p class="section-sub-title">Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                <p class="section-sub-title">Here are the news my dudes.</p>
             </div>
             <div class="row">
                 <!-- Blog -->
@@ -254,19 +254,7 @@
     </div>
 </section>
 <!-- End of Blog Section -->	<!-- Features Section-->
-<section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
-    <div class="container">
-        <div class="section-content" data-aos="fade-up">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="mb-2">Make a beautiful website, or million of them</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, veritatis qui eligendi delectus quia fuga!</p>
-                    <a class="btn btn-outline-primary btn-lg">FEATURES</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!-- End of Features Section--></div>
 <footer class="mastfoot my-3">
     <div class="inner container">
