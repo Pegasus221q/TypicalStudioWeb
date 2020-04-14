@@ -13,6 +13,10 @@
         $admin = $_SESSION['admin'];
     
     }
+    else
+    {
+        $admin = 0;
+    }
 ?>
 
 <head>

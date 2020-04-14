@@ -138,7 +138,7 @@
                     <!-- Skill Item -->
                     <div class="skill-item">
                         <div class="d-flex justify-content-between">
-                             <p>Dungun Dude</p>
+                             <p>Dungeon Dude - A Knights Survival</p>
                             <p class="text-muted">75%</p>
                         </div>
                         <div class="progress" data-percent="75%">

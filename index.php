@@ -292,7 +292,7 @@
                         <!-- Portfolio Item -->
                         <div class="grid-item minimalism" data-aos="fade-up">
                             <div class="grid-item-wrapper">
-                                <img src="img/DD_01.png" alt="portfolio-img" class="portfolio-item">
+                                <img src="img/DD_01.png" alt="Loading..." class="portfolio-item">
                                 <div class="grid-info">
                                     <div class="grid-link d-flex justify-content-center">
                                         <a class="img-pop" data-rel="lightcase" href="img/DD_01.png" title="Photo-1">
@@ -300,7 +300,7 @@
                                         </a>
                                     </div>
                                     <div class="grid-title">
-                                        <h4>DunGun Dude (Mobile)</h4>
+                                        <h4>Dungeon Dude - A Knights Survival (Mobile)</h4>
                                     </div>
                                 </div>
 
@@ -310,7 +310,7 @@
                         <!-- Portfolio Item -->
                         <div class="grid-item vintage" data-aos="fade-up">
                             <div class="grid-item-wrapper">
-                                <img src="img/DD_01.PNG" alt="portfolio-img" class="portfolio-item">
+                                <img src="img/DD_01.PNG" alt="Loading..." class="portfolio-item">
                                 <div class="grid-info">
                                     <div class="grid-link d-flex justify-content-center">
                                         <a class="img-pop" data-rel="lightcase" href="img/DD_01.PNG" title="Ship">
@@ -318,7 +318,7 @@
                                         </a>
                                     </div>
                                     <div class="grid-title">
-                                        <h4>DunGun Dude (PC)</h4>
+                                        <h4>Dungeon Dude - A Knights Survival (PC)</h4>
                                     </div>
                                 </div>
 
