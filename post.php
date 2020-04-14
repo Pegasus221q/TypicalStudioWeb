@@ -157,8 +157,8 @@
                                 <input type="text" class="form-control" id="tittle" name="tittle" placeholder="Tittle">
                             </div>
                             <div class="col-md-12 form-group">
-                                <span style="font-weight:bold; font-size: 30px;">Profile Picture: </span>
-                                <input type="file" class="form-control" name="fileToUpload" id="fileToUpload" value="<?php echo $avatar;?>">
+                                <span style="font-weight:bold; font-size: 30px;">Picture: </span>
+                                <input type="file" class="form-control" name="fileToUpload" id="fileToUpload" value="">
                             </div>
                             <div class="col-md-12 form-group">
                                 <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
