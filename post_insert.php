@@ -53,9 +53,11 @@ if($_FILES['fileToUpload'] != NULL)
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
-            $query3 = "INSERT INTO posts('tittle', 'content', 'user_id', 'image') VALUES('$tittle','$message','$user','$target_file')";
+            $query3 = "INSERT INTO posts(tittle,content,user_id,image) VALUES('$tittle','$message','$user','$target_file')";
 
             mysqli_query($link, $query3);
+
+            echo $query3;
 
 
 
@@ -64,5 +66,7 @@ if($_FILES['fileToUpload'] != NULL)
 }
 }
 }
+
+    header("Location: blog.php");
 
 ?>
