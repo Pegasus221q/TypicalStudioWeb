@@ -140,7 +140,7 @@
         <div class="section-content">
             <div class="title-wrap mb-5" data-aos="fade-up">
                 <h2 class="section-title">Latest <b>news</b></h2>
-                <p class="section-sub-title">Here are the news my dudes.</p>
+                <p class="section-sub-title">Here's the news my dudes.</p>
             </div>
             <div class="row">
                 <!-- Blog -->
@@ -164,14 +164,6 @@
                                     </div>
                                     <div class="blog-author">
                                         <p>by John Doe</p>
-                                    </div>
-                                    <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
-                                        </a>
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
