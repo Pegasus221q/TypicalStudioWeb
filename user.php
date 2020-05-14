@@ -158,6 +158,13 @@
             </div>
         </div>
     </div>
+
+            
+<div style="text-align: center;">
+<a href="user_del.php" onclick="return confirm('Are you sure?');"><img src = "img/x.png" width="50px"></a>
+</div>
+
+
 </section>
 <!-- End of Contact Form Section -->		<!-- Features Section-->
 <!-- End of Features Section-->		<footer class="mastfoot my-3">
