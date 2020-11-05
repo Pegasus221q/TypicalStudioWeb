@@ -1,9 +1,9 @@
 <?php
 
 $server = 'localhost';
-$user = 'root';
-$pass = '';
-$db_name = 'typicals_typicalstudio';
+$user = 'typicals';
+$pass = 'SELECT*ts2020';
+$db_name = 'typicals_typicalstudiov2';
 
 $link = mysqli_connect($server, $user, $pass, $db_name);
 

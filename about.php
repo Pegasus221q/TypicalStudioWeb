@@ -146,7 +146,7 @@
                         </div>
                     </div>                
                     <br>
-                    <img style=" margin-left: auto; margin-right: auto;" width="55%" src="img/DD_01.PNG">
+                    <img style=" margin-left: auto; margin-right: auto;" width="55%" src="img/DD_01.png">
                     <br>
                     <br>
                     <!-- Skill Item -->

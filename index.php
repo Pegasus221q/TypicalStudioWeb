@@ -21,7 +21,7 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="img/just logo.png">
+    <link rel="icon" src="img/just_logo.png">
     <title>Typical Studio</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -180,6 +180,21 @@
                         </div>
                         
                     </div>
+                    
+                    <div class="testi-item text-center">
+                        <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                        <h4 class="testi-text">My PC is my wife.HaHa xD</h4>
+                        <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                            <div class="testi-img mr-2">
+                                <img src="img/mbeliš.jpg" alt="Loading...">
+                            </div>
+                            <div class="testi-details">
+                                <p class="testi-author mb-0 font-weight-bolder">Marcel Andrej Beliš</p>
+                                <p class="testi-desc mb-0">CEO/Programmer/Other</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="testi-item text-center">
                         <i class="testi-icon fa fa-3x fa-quote-left"></i>
                         <h4 class="testi-text">Lil b*tch is a personality not height!</h4>
@@ -232,19 +247,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testi-item text-center">
-                        <i class="testi-icon fa fa-3x fa-quote-left"></i>
-                        <h4 class="testi-text">My PC is my wife.</h4>
-                        <div class="testi-meta-inner d-flex justify-content-center align-items-center">
-                            <div class="testi-img mr-2">
-                                <img src="img/mbeliš.jpg" alt="Loading...">
-                            </div>
-                            <div class="testi-details">
-                                <p class="testi-author mb-0 font-weight-bolder">Marcel Andrej Beliš</p>
-                                <p class="testi-desc mb-0">Programmer</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="testi-item text-center">
                         <i class="testi-icon fa fa-3x fa-quote-left"></i>
                         <h4 class="testi-text">WW was the best time of our lives.</h4>
@@ -310,10 +313,10 @@
                         <!-- Portfolio Item -->
                         <div class="grid-item vintage" data-aos="fade-up">
                             <div class="grid-item-wrapper">
-                                <img src="img/DD_01.PNG" alt="Loading..." class="portfolio-item">
+                                <img src="img/DD_01.png" alt="Loading..." class="portfolio-item">
                                 <div class="grid-info">
                                     <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/DD_01.PNG" title="Ship">
+                                        <a class="img-pop" data-rel="lightcase" href="img/DD_01.png" title="Ship">
                                             <span class="lnr lnr-move"></span>
                                         </a>
                                     </div>
