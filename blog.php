@@ -147,7 +147,7 @@
                 <div class="col-md-12 blog-holder">
                     <div class="row">
                         <!-- Blog Item -->
-                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
+                      <!--  <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
                             <div class="blog-item">
                                 <div class="blog-img">
                                     <a href="single.php"><img src="img/blog-1.jpg" alt=""></a>
@@ -166,7 +166,7 @@
                                         <p>by John Doe</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <br>
