@@ -122,7 +122,7 @@
             <!-- Section Title -->
             <div class="title-wrap" data-aos="fade-up">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-sub-title">If you have any issues or just questions<br>Feel free to write to us.</p>
+                <p class="section-sub-title">If you have any issues or just questions<br>Feel free to write to us.<br>CURRENTLY WORK IN PROGRESS!!</p>
             </div>
             <!-- End of Section Title -->
             <div class="row">
