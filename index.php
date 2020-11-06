@@ -261,6 +261,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="testi-item text-center">
+                        <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                        <h4 class="testi-text">I am Tachonk and I sponk</h4>
+                        <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                            <div class="testi-img mr-2">
+                                <img src="img/tgoran.jpg" alt="Loading...">
+                            </div>
+                            <div class="testi-details">
+                                <p class="testi-author mb-0 font-weight-bolder">Goran Tomaš</p>
+                                <p class="testi-desc mb-0">2. Artist</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- End of Testimonial -->
             </div>
