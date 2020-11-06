@@ -20,8 +20,8 @@
      - https://gettemplates.co/roxy
     -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" src="img/just_logo.png">
+    <meta http-equiv="X-UA-Compatible" content="firefox">
+    <link rel="icon" href="img/logo.png">
     <title>Typical Studio</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -155,7 +155,7 @@
 
 
    
-<section id="testimonial" class="section-padding bg-fixed bg-white overlay" style="background-image: url(img/DD_01.png);">
+<section id="testimonial" class="section-padding bg-fixed bg-white overlay" style="background-image: url(img/DD.png);">
     <div class="container">
         <div class="section-content" data-aos="fade-up">
             <div class="heading-section text-center">
