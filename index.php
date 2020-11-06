@@ -190,7 +190,7 @@
                             </div>
                             <div class="testi-details">
                                 <p class="testi-author mb-0 font-weight-bolder">Marcel Andrej Beliš</p>
-                                <p class="testi-desc mb-0">CEO/Programmer/Other</p>
+                                <p class="testi-desc mb-0">Programmer/Other</p>
                             </div>
                         </div>
                     </div>
