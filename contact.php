@@ -122,7 +122,7 @@
             <!-- Section Title -->
             <div class="title-wrap" data-aos="fade-up">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-sub-title">If you have any issues or just questions<br>Feel free to write to us.<br>CURRENTLY WORK IN PROGRESS!!</p>
+                <p class="section-sub-title">If you have any issues or just questions<br>Feel free to write to us.</p>
             </div>
             <!-- End of Section Title -->
             <div class="row">
@@ -135,6 +135,9 @@
                             </div>
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                             </div>
                             <div class="col-md-12 form-group">
                                 <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
@@ -171,7 +174,7 @@
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
                     <span class="lnr lnr-phone fs-40 py-4 d-block"></span>
                     <h5>EMAIL</h5>
-                    <p>/</p>
+                    <p>support@typicalstudio.com</p>
                 </div>
 
             </div>
