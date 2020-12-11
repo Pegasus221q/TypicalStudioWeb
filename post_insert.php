@@ -6,6 +6,7 @@ $user = $_SESSION['user_id'];
 
 $tittle = mysqli_real_escape_string($link, $_POST['tittle']);
 $message = mysqli_real_escape_string($link, $_POST['message']);
+$date =  date("l jS \of F Y");
 
 
 if($_FILES['fileToUpload'] != NULL)
@@ -34,7 +35,7 @@ if($_FILES['fileToUpload'] != NULL)
 
         }
         // Check file size
-        if ($_FILES["fileToUpload"]["size"] > 1000000) {
+        if ($_FILES["fileToUpload"]["size"] > 100000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }
@@ -53,7 +54,7 @@ if($_FILES['fileToUpload'] != NULL)
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
-            $query3 = "INSERT INTO posts(tittle,content,user_id,image) VALUES('$tittle','$message','$user','$target_file')";
+            $query3 = "INSERT INTO posts(tittle,content,date_add,user_id,image) VALUES('$tittle','$message','$date','$user','$target_file')";
 
             mysqli_query($link, $query3);
 

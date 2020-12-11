@@ -3,6 +3,7 @@
 
 <?php
     include_once './session.php';
+    include_once './database.php';
 
     if ($_SESSION != NULL)
     {
@@ -141,42 +142,63 @@
             <div class="title-wrap mb-5" data-aos="fade-up">
                 <h2 class="section-title">Latest <b>news</b></h2>
                 <p class="section-sub-title">Here's the news my dudes.</p>
-            </div>
-            <div class="row">
-                <!-- Blog -->
-                <div class="col-md-12 blog-holder">
-                    <div class="row">
-                        <!-- Blog Item -->
-                      <!--  <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="single.php"><img src="img/blog-1.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-title">
-                                        <a href="single.php"><h4>Amazing Blog Title</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">30 May 2016</p>
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>Lorem ipsum dolor sit amet con sectetur adipiscing elit sed do eiu smod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>by John Doe</p>
-                                    </div>
-                                </div>
-                            </div>-->
-                        </div>
-                    </div>
-                    <br>
-                    <div style="text-align:center">
+                <div style="text-align:center">
                     <?php 
                         if($admin != NULL)
                         {
                             echo '<a href="post.php" class="btn btn-primary btn-shadow btn-lg">Post</a>';
                         }
                     ?>
+                    </div>
+                    <br>
+            </div>
+            <div class="row">
+                <!-- Blog -->
+                <div class="col-md-12 blog-holder">
+                    <div class="row">
+                    <table width="100%" align="center">
+                    <tr><td>
+                    <?php
+                        $query = "SELECT * FROM posts p INNER JOIN users u ON u.id=p.user_id ORDER BY date_add DESC";
+                        $result = mysqli_query($link, $query);
+                        while($row = mysqli_fetch_array($result))
+                        {
+                            echo '<div class="col-md-4 blog-item-wrapper" data-aos="fade-up">';
+                            echo '<div class="blog-item">';
+                            echo     '<div class="blog-img">';
+                            echo '<a href="single.php"><img width="300px" height="250px" src='.$row['image'].' alt="Loading..."></a>';
+                            echo '</div>';
+                            echo        '<div class="blog-text">';
+                            echo        '<div class="blog-title">';
+                            echo ' <a href="single.php?id='.$row['id'].'"><h4>'.$row['tittle'] .'</h4></a>';
+                            echo '</div>';
+                            echo '<div class="blog-meta">';
+                            echo '<p class="blog-date">'.$row['date_add'].'</p>';
+                            echo '</div>';
+                            echo '<div class="blog-desc">';
+                            echo substr($row['content'],0,50);
+                            echo '</div>';
+                            echo '<div class="blog-author">';
+                            echo '<p>by ';
+                            if($row['username'] == NULL)
+                            {
+                                echo '<span class="fs-16 primary-color">   ' , $row['first_name'] ,' ', $row['last_name'] , '   </span></div>';
+                            }
+                            else
+                            {
+                                echo '<span class="fs-16 primary-color">   ' , $row['username'] , '   </span></div>';
+                            }
+                            echo '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+
+                        }
+                        ?>
+                        <!-- Blog Item -->
+                        </td></tr>
+                        </table>
                     </div>
                 </div>
                 <!-- End of Blog -->
