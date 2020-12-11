@@ -6,9 +6,9 @@
 
     $email_from = 'support@typicalstudio.com';
     $email_subject = "Contact Submission";
-    $email_body = "User name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                        "User Message: $message.\n";
+    $email_body = "User name: $name\n".
+                    "User Email: $visitor_email\n".
+                        "User Message: $message\n";
 
     $to = "support@typicalstudio.com";
     $headers = "From: $email_from \r\n";
