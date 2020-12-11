@@ -7,7 +7,7 @@ $server = 'localhost';
 
 $user = 'typicals_root';
 $pass = 'SELECT*ts2021';
-$db_name = 'typicals_typicalstudiov2';
+$db_name = 'typicals_typicalstudioV2';
 
 
 $link = mysqli_connect($server, $user, $pass, $db_name);
