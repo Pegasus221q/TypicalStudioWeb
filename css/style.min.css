@@ -100,7 +100,7 @@ section {
   border-radius: 0;
   margin-bottom: 0;
   overflow: hidden;
-  min-height: 100vh; }
+  min-height: 50vh; }
 
   .jumbotron2 {
     background-repeat: no-repeat;
@@ -110,7 +110,7 @@ section {
     border-radius: 0;
     margin-bottom: 0;
     overflow: hidden;
-    min-height: 100vh; }
+    min-height: 50vh; }
 
     @media (max-width: 767px) and (orientation: landscape) {
       .jumbotron2 {
@@ -136,7 +136,7 @@ section {
 
   @media (max-width: 767px) and (orientation: landscape) {
     .jumbotron {
-      min-height: 500px; } }
+      max-height: 800px; } }
   .jumbotron .container {
     position: relative;
     z-index: 1; }

@@ -1,13 +1,13 @@
 <?php
 
 $server = 'localhost';
-//$user = 'root';
-//$pass = '';
-//$db_name = 'typicalstudio';
+$user = 'root';
+$pass = '';
+$db_name = 'typicalstudio';
 
-$user = 'typicals_root';
-$pass = 'SELECT*ts2021';
-$db_name = 'typicals_typicalstudioV2';
+//$user = 'typicals_root';
+//$pass = 'SELECT*ts2021';
+//$db_name = 'typicals_typicalstudioV2';
 
 
 $link = mysqli_connect($server, $user, $pass, $db_name);

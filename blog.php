@@ -166,7 +166,7 @@
                             echo '<div class="col-md-4 blog-item-wrapper" data-aos="fade-up">';
                             echo '<div class="blog-item">';
                             echo     '<div class="blog-img">';
-                            echo '<a href="single.php"><img width="300px" height="250px" src='.$row['image'].' alt="Loading..."></a>';
+                            echo '<a href="single.php?id='.$row['id'].'"><img width="300px" height="250px" src='.$row['image'].' alt="Loading..."></a>';
                             echo '</div>';
                             echo        '<div class="blog-text">';
                             echo        '<div class="blog-title">';

@@ -3,6 +3,7 @@
 
 <?php
     include_once './session.php';
+    include_once './database.php';
 
     if ($_SESSION != NULL)
     {
@@ -13,6 +14,13 @@
         $admin = $_SESSION['admin'];
     
     }
+
+    $p_id = (int) $_GET['id'];
+    $query = "SELECT * FROM ocene WHERE id=$p_id";
+
+    $result = mysqli_query($link, $query);
+    $post = mysqli_fetch_array($result);
+
 ?>
 
 <head>
