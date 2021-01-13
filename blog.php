@@ -131,7 +131,7 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/DD_1.png)">
+<div class="jumbotron2 jumbotron2-single d-flex align-items-center" style="background-image: url(img/DD_1.png)">
   <div class="container text-center">
     <h1 class="display-2 mb-4">News</h1>
   </div>

@@ -2,7 +2,7 @@
  * Roxy: Bootstrap template by GettTemplates.com
  * https://gettemplates.co/roxy
  */
-html, body {
+ html, body {
   width: 100%;
   overflow-x: hidden; }
 
@@ -100,7 +100,7 @@ section {
   border-radius: 0;
   margin-bottom: 0;
   overflow: hidden;
-  min-height: 50vh; }
+  min-height: 100vh; }
 
   .jumbotron2 {
     background-repeat: no-repeat;
@@ -111,6 +111,54 @@ section {
     margin-bottom: 0;
     overflow: hidden;
     min-height: 50vh; }
+
+    .jumbon {
+      color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-height: 50vh; }
+
+    @media (max-width: 767px) and (orientation: landscape) {
+      .jumbon {
+        min-height: 500px; } }
+    .jumbon .container {
+      position: relative;
+      z-index: 1; }
+    .jumbon:before {
+      position: absolute;
+      display: block;
+      content: "";
+      opacity: 0.8;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #EBEBEB;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FF6100, #EBEBEB);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FF6100, #EBEBEB);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    .jumbon h1 {
+      line-height: .9;
+      font-weight: bold;
+      display: inline-block;
+      border: 15px solid #fff;
+      padding: 30px;
+      font-size: 9rem;
+      opacity: 0;
+      animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+      animation-delay: .8s; }
+  
+  .jumbon-single h1 {
+    font-size: 3rem !important; }
 
     @media (max-width: 767px) and (orientation: landscape) {
       .jumbotron2 {
@@ -136,7 +184,7 @@ section {
 
   @media (max-width: 767px) and (orientation: landscape) {
     .jumbotron {
-      max-height: 800px; } }
+      min-height: 500px; } }
   .jumbotron .container {
     position: relative;
     z-index: 1; }

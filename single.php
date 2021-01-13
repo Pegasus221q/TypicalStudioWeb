@@ -16,7 +16,7 @@
     }
 
     $p_id = (int) $_GET['id'];
-    $query = "SELECT * FROM ocene WHERE id=$p_id";
+    $query = "SELECT * FROM posts WHERE id=$p_id";
 
     $result = mysqli_query($link, $query);
     $post = mysqli_fetch_array($result);
