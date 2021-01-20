@@ -8,7 +8,12 @@
     $message = $_POST['message'];
     $date =  date("l jS \of F Y");
 
+    $visitor_email = test_input($_POST["email"]);
+        if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
 
+            header("Location: contact.php");
+}
 
     $query = "INSERT INTO support (email, username, subject, message, date, IsChecked) VALUES ('$visitor_email','$name','$subject','$message', '$date', '0')";
 

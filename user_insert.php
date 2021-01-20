@@ -10,6 +10,13 @@ $pass2 = mysqli_real_escape_string($link, $_POST['pass2']);
      
 $pass = $salt.$pass1;
 $pass = sha1($pass);
+
+$email = test_input($_POST["email"]);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $emailErr = "Invalid email format";
+
+  header("Location: registration.php");
+}
         
         if (!empty($first_name) && !empty($last_name) && !empty($email)
         && !empty($pass1) && ($pass1==$pass2))
