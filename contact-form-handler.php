@@ -20,6 +20,7 @@
     $email_body = "User name: $name\n".
                     "User Email: $visitor_email\n".
                         "User Message: $message\n";
+                    
 
     $email_body2 = "We have reacived your message.\n".
                     "So please wait patiently for an awnser from one of our supports.\n".
