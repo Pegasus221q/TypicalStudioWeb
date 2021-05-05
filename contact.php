@@ -131,16 +131,16 @@
                     <form method="post" name="contact-us" action="contact-form-handler.php">
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..." required></textarea>
                             </div>
                             <div class="col-md-12 text-center">
                                 <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Send Message</button>
