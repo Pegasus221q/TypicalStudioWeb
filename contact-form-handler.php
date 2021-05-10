@@ -1,14 +1,15 @@
 <?php
+    session_start();
     include_once './database.php';
 
 
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $name = $_SESSION['value1'];
+    $visitor_email = $_SESSION['value2'];
+    $subject = $_SESSION['value3'];
+    $message = $_SESSION['value4'];
     $date =  date("l jS \of F Y");
 
-    $visitor_email = test_input($_POST["email"]);
+    $visitor_email = test_input($_SESSION["email"]);
         if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
 
@@ -27,11 +28,7 @@
                         "User Message: $message\n";
                     
 
-    $email_body2 = "We have reacived your message.\n".
-                    "So please wait patiently for an awnser from one of our supports.\n".
-                    "\n".
-                    "Please confirm that this is your message: \n".
-                    "$message";
+    $email_body2 = './postcard.php';
 
     $to = "support@typicalstudio.com";
     $headers = "From: $email_from \r\n";
@@ -47,7 +44,7 @@
 
 
 
-    header("Location: contact.php");
+    header("Location: postcard.php");
 
 
     

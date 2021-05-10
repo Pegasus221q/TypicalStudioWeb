@@ -128,7 +128,7 @@
             <div class="row">
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" data-aos="fade-up">
-                    <form method="post" name="contact-us" action="contact-form-handler.php">
+                    <form method="post" name="contact-us" action="con_info.php">
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
@@ -142,6 +142,8 @@
                             <div class="col-md-12 form-group">
                                 <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..." required></textarea>
                             </div>
+                            <div class="g-recaptcha col-md-12 text-center" data-callback="recaptchaCallback" data-sitekey="6Lc8dc0aAAAAAPlSARvM3SEkdGGtL0Xa3Tn6lGXq">
+                            </div> 
                             <div class="col-md-12 text-center">
                                 <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Send Message</button>
                             </div>

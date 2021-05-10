@@ -218,7 +218,7 @@
                             <tbody>
                               <tr>
                                 <td align="center" valign="top" style="padding: 10px;">
-                                  <a href="http://typicalstudio.com" style="text-decoration: none;"><img src="images/New_logo.png" width="260" height="" alt="" style="height: auto; max-width: 100%; border: 0; line-height: 100%; outline: 0; -ms-interpolation-mode: bicubic; color: #ffffff; font-size: 14px;"></a>
+                                  <a href="http://typicalstudio.com" style="text-decoration: none;"><img src="img/New_logo.png" width="260" height="" alt="" style="height: auto; max-width: 100%; border: 0; line-height: 100%; outline: 0; -ms-interpolation-mode: bicubic; color: #ffffff; font-size: 14px;"></a>
                                 </td>
                               </tr>
                             </tbody>
@@ -239,16 +239,17 @@
                   <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
 
                     <?php
+                    session_start();
     include_once './database.php';
 
 
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $name = $_SESSION['name'];
+    $visitor_email = $_SESSION['email'];
+    $subject = $_SESSION['subject'];
+    $message = $_SESSION['message'];
     $date =  date("l jS \of F Y");
 
-    $visitor_email = test_input($_POST["email"]);
+    $visitor_email = test_input($_SESSION["email"]);
         if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
 
