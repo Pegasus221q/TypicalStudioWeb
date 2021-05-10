@@ -134,7 +134,7 @@
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                             </div>
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>

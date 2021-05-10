@@ -1,6 +1,58 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
+
+<?php   session_start();      
+include_once './database.php';
+
+
+$name = $_SESSION['value1'];
+$visitor_email = $_SESSION['value2'];
+$subject = $_SESSION['value3'];
+$message = $_SESSION['value4'];
+$date =  date("l jS \of F Y");
+
+    if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+
+        header("Location: contact.php");
+}
+
+$query = "INSERT INTO support (email, username, subject, message, date, IsChecked) VALUES ('$visitor_email','$name','$subject','$message', '$date', '0')";
+
+mysqli_query($link, $query);
+
+
+
+$email_from = 'support@typicalstudio.com';
+$email_body = "User name: $name\n".
+                "User Email: $visitor_email\n".
+                    "User Message: $message\n";
+
+                    $email_body2 = "We have reacived your message.\n".
+                "So please wait patiently for an awnser from one of our supports.\n".
+                "\n".
+                "Please confirm that this is your message: \n".
+                "$message";
+
+$to = "support@typicalstudio.com";
+$headers = "From: $email_from \r\n";
+$headers .= "Reply-To: $visitor_email \r\n";
+mail($to, $subject, $email_body, $headers);
+
+
+
+mail($visitor_email, $subject, $email_body2, $headers);
+
+
+
+
+
+
+//header("Location: contact.php");
+
+?>  
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -237,59 +289,6 @@
                     </tbody>
                   </table>
                   <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
-
-                    <?php
-                    session_start();
-    include_once './database.php';
-
-
-    $name = $_SESSION['name'];
-    $visitor_email = $_SESSION['email'];
-    $subject = $_SESSION['subject'];
-    $message = $_SESSION['message'];
-    $date =  date("l jS \of F Y");
-
-    $visitor_email = test_input($_SESSION["email"]);
-        if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
-
-            header("Location: contact.php");
-}
-
-    $query = "INSERT INTO support (email, username, subject, message, date, IsChecked) VALUES ('$visitor_email','$name','$subject','$message', '$date', '0')";
-
-    mysqli_query($link, $query);
-
-
-
-    $email_from = 'support@typicalstudio.com';
-    $email_body = "User name: $name\n".
-                    "User Email: $visitor_email\n".
-                        "User Message: $message\n";
-
-                        $email_body2 = "We have reacived your message.\n".
-                    "So please wait patiently for an awnser from one of our supports.\n".
-                    "\n".
-                    "Please confirm that this is your message: \n".
-                    "$message";
-
-    $to = "support@typicalstudio.com";
-    $headers = "From: $email_from \r\n";
-    $headers .= "Reply-To: $visitor_email \r\n";
-    mail($to, $subject, $email_body, $headers);
-
-
-
-    mail($visitor_email, $subject, $email_body2, $headers);
-
-
-
-
-
-
-    header("Location: contact.php");
-
-?>       
                     <tbody>
                       <tr>
                        <td class="pc-sm-p-25-10-15 pc-xs-p-15-0-5" valign="top" bgcolor="#ffffff" style="padding: 30px 20px 20px; background-color: #ffffff; border-radius: 8px;">
@@ -309,7 +308,7 @@
                             </tbody>
                             <tbody>
                               <tr>
-                                <td class="pc-fb-font" valign="top" style="font-family: 'Fira Sans', Helvetica, Arial, sans-serif; padding: 10px 20px 0; line-height: 28px; font-size: 18px; font-weight: 300; letter-spacing: -0.2px; color: #9B9B9B;">Your mail:<?php  "$visitor_email" ?> &nbsp;<br>Your message: <?php"$message" ?> &nbsp;<br><br><br><br><br><br>we will contact you as soon as we can soo please be patient.</td>
+                                <td class="pc-fb-font" valign="top" style="font-family: 'Fira Sans', Helvetica, Arial, sans-serif; padding: 10px 20px 0; line-height: 28px; font-size: 18px; font-weight: 300; letter-spacing: -0.2px; color: #9B9B9B;">Your mail: <?php echo $visitor_email ?> &nbsp;<br>Your message: <?php echo $message ?> &nbsp;<br><br><br><br><br><br>we will contact you as soon as we can soo please be patient.</td>
                               </tr>
                               <tr>
                                 <td height="4" style="font-size: 1px; line-height: 1px;">&nbsp;</td>

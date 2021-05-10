@@ -9,7 +9,6 @@
     $message = $_SESSION['value4'];
     $date =  date("l jS \of F Y");
 
-    $visitor_email = test_input($_SESSION["email"]);
         if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
 
@@ -28,7 +27,7 @@
                         "User Message: $message\n";
                     
 
-    $email_body2 = './postcard.php';
+    $email_body2 = ./postcard.php;
 
     $to = "support@typicalstudio.com";
     $headers = "From: $email_from \r\n";
